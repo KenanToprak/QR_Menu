@@ -1,18 +1,21 @@
-import React from 'react';
-
 const CategoryMenu = ({ categories, activeCategory, onSelectCategory }) => {
   return (
-    <div className="category-menu-container">
-      {categories.map((category) => (
-        <button
-          key={category.id}
-          className={`category-button ${activeCategory === category.id ? 'active' : ''}`}
-          onClick={() => onSelectCategory(category.id)}
-        >
-          {category.category}
-        </button>
-      ))}
-    </div>
+    <nav className="category-menu-container" aria-label="Menü kategorileri">
+      {categories.map((category) => {
+        const isActive = activeCategory === category.id;
+        return (
+          <button
+            key={category.id}
+            type="button"
+            className={`category-button ${isActive ? 'active' : ''}`}
+            aria-current={isActive ? 'true' : undefined}
+            onClick={() => onSelectCategory(category.id)}
+          >
+            {category.category}
+          </button>
+        );
+      })}
+    </nav>
   );
 };
 

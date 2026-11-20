@@ -1,3 +1,5 @@
+import { resolveAssetUrl } from './utils/assets.js';
+
 export const menuData = [
   {
     category: "Sıcak İçecekler",
@@ -8,21 +10,21 @@ export const menuData = [
         name: "Latte Macchiato",
         description: "Taze çekilmiş espresso, buharla ısıtılmış süt ve yoğun süt köpüğü.",
         price: "85 ₺",
-        image: "/images/hot_drink.jpg",
+        image: resolveAssetUrl("images/hot_drink.jpg"),
       },
       {
         id: 2,
         name: "Filtre Kahve",
         description: "Özel harman çekirdeklerle demlenmiş yoğun aromalı filtre kahve.",
         price: "60 ₺",
-        image: "/images/hot_drink.jpg",
+        image: resolveAssetUrl("images/hot_drink.jpg"),
       },
       {
         id: 3,
         name: "Sıcak Çikolata",
         description: "Gerçek Belçika çikolatası ve sıcak sütün enfes uyumu.",
         price: "90 ₺",
-        image: "/images/hot_drink.jpg",
+        image: resolveAssetUrl("images/hot_drink.jpg"),
       }
     ]
   },
@@ -35,21 +37,21 @@ export const menuData = [
         name: "Iced Caramel Macchiato",
         description: "Karamel şurubu, soğuk süt, buz ve yoğun espresso.",
         price: "95 ₺",
-        image: "/images/cold_drink.jpg",
+        image: resolveAssetUrl("images/cold_drink.jpg"),
       },
       {
         id: 5,
         name: "Taze Nane Limonata",
         description: "Taze limon suyu ve taze nane yaprakları ile ferahlatıcı lezzet.",
         price: "75 ₺",
-        image: "/images/cold_drink.jpg",
+        image: resolveAssetUrl("images/cold_drink.jpg"),
       },
       {
         id: 6,
         name: "Buzlu Çay (Şeftali)",
         description: "Demlenmiş siyah çay ve taze şeftali aroması.",
         price: "65 ₺",
-        image: "/images/cold_drink.jpg",
+        image: resolveAssetUrl("images/cold_drink.jpg"),
       }
     ]
   },
@@ -62,21 +64,21 @@ export const menuData = [
         name: "Gourmet Burger Menü",
         description: "150 gr. dana köfte, cheddar peyniri, karamelize soğan, patates kızartması ile.",
         price: "240 ₺",
-        image: "/images/fast_food.jpg",
+        image: resolveAssetUrl("images/fast_food.jpg"),
       },
       {
         id: 8,
         name: "Crispy Tavuk Burger",
         description: "Çıtır tavuk fileto, marul, özel sos ve patates kızartması.",
         price: "195 ₺",
-        image: "/images/fast_food.jpg",
+        image: resolveAssetUrl("images/fast_food.jpg"),
       },
       {
         id: 9,
         name: "Karışık Pizza (Orta)",
-        description: "Sucuk, sosis, mantar, yeşil biber, mısır ve bol mozerella peyniri.",
+        description: "Sucuk, sosis, mantar, yeşil biber, mısır ve bol mozzarella peyniri.",
         price: "280 ₺",
-        image: "/images/fast_food.jpg",
+        image: resolveAssetUrl("images/fast_food.jpg"),
       }
     ]
   }

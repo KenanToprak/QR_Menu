@@ -1,22 +1,16 @@
-import React from 'react';
-
 const MenuItem = ({ item, onClick }) => {
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      onClick(item);
-    }
-  };
-
   return (
-    <div
+    <button
+      type="button"
       className="menu-item"
-      role="button"
-      tabIndex={0}
       onClick={() => onClick(item)}
-      onKeyDown={handleKeyDown}
     >
-      <img src={item.image} alt={item.name} className="menu-item-img" />
+      <img
+        src={item.image}
+        alt={item.name}
+        className="menu-item-img"
+        loading="lazy"
+      />
       <div className="menu-item-content">
         <div className="menu-item-header">
           <h3 className="menu-item-title">{item.name}</h3>
@@ -24,7 +18,7 @@ const MenuItem = ({ item, onClick }) => {
         </div>
         <p className="menu-item-desc">{item.description}</p>
       </div>
-    </div>
+    </button>
   );
 };
 
